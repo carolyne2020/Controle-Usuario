@@ -1,0 +1,32 @@
+CREATE DATABASE `controle`
+    CHARACTER SET 'latin1'
+    COLLATE 'latin1_swedish_ci';
+
+USE `controle`;
+
+#
+# Structure for the `cadastro` table : 
+#
+
+CREATE TABLE `cadastro` (
+  `id_cadastro` int(11) NOT NULL AUTO_INCREMENT,
+  `id_setor` int(11) DEFAULT NULL,
+  `nome` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `telefone` varchar(20) NOT NULL,
+  `whatsapp` varchar(20) DEFAULT NULL,
+  `ramal` varchar(20) DEFAULT NULL,
+  `data` datetime DEFAULT NULL,
+  `atribuicao` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_cadastro`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+#
+# Structure for the `setor` table : 
+#
+
+CREATE TABLE `setor` (
+  `id_setor` int(11) NOT NULL AUTO_INCREMENT,
+  `setor` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id_setor`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
